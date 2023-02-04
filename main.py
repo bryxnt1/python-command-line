@@ -29,8 +29,8 @@ Contact(first_name='Bryant', last_name='Perez', phone=347986567).save()
 Contact(first_name='Jimy', last_name='Allen', phone=1234567889).save()
 
 # find by first name
-michael = Contact.select().where(Contact.first_name == 'Michael').get()
-print(michael)
+bryant = Contact.select().where(Contact.first_name == 'Bryant').get()
+print(bryant)
 
 # find all
 for contact in Contact.select():
