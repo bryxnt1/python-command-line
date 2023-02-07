@@ -2,7 +2,7 @@ from peewee import *
 from playhouse.shortcuts import model_to_dict, dict_to_model
 
 db = PostgresqlDatabase('contacts', user='',
-                        password='', host='localhost', port=5432)
+                        password='', host='localhost', port=9000)
 
 
 class BaseModel(Model):
@@ -27,8 +27,8 @@ db.create_tables([Contact])
 
 Contact(first_name='Bryant', last_name='Perez', phone=347986567).save()
 Contact(first_name='Jimy', last_name='Allen', phone=1234567889).save()
+Contact(first_name='Kan', last_name='Lan', phone=646418).save()
 
-# find by first name
 bryant = Contact.select().where(Contact.first_name == 'Bryant').get()
 print(bryant)
 
