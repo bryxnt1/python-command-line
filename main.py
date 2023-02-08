@@ -27,11 +27,10 @@ db.create_tables([Contact])
 
 Contact(first_name='Bryant', last_name='Perez', phone=347986567).save()
 Contact(first_name='Jimy', last_name='Allen', phone=1234567889).save()
-Contact(first_name='Kan', last_name='Lan', phone=646418).save()
+Contact(first_name='Kan', last_name='Lan', phone=646418123454).save()
 
 bryant = Contact.select().where(Contact.first_name == 'Bryant').get()
 print(bryant)
 
-# find all
 for contact in Contact.select():
     print(contact.first_name)
